@@ -14,6 +14,9 @@
 		8EAC3CE61D6A9EF000C2410C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EAC3CE41D6A9EF000C2410C /* LaunchScreen.storyboard */; };
 		8EAC3CF11D6A9EF000C2410C /* Early_BirdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC3CF01D6A9EF000C2410C /* Early_BirdTests.swift */; };
 		8EAC3CFC1D6A9EF000C2410C /* Early_BirdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC3CFB1D6A9EF000C2410C /* Early_BirdUITests.swift */; };
+		8EAC3D0C1D6A9FAB00C2410C /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EAC3D0B1D6A9FAB00C2410C /* alarm.mp3 */; };
+		8EAC3D0E1D6AA83B00C2410C /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC3D0D1D6AA83B00C2410C /* AudioManager.swift */; };
+		8EAC745B1DAC2C8C00C39815 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC745A1DAC2C8C00C39815 /* Knob.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		8EAC3CF71D6A9EF000C2410C /* Early BirdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Early BirdUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAC3CFB1D6A9EF000C2410C /* Early_BirdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Early_BirdUITests.swift; sourceTree = "<group>"; };
 		8EAC3CFD1D6A9EF000C2410C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EAC3D0B1D6A9FAB00C2410C /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
+		8EAC3D0D1D6AA83B00C2410C /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		8EAC745A1DAC2C8C00C39815 /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,11 @@
 		8EAC3CDA1D6A9EF000C2410C /* Early Bird */ = {
 			isa = PBXGroup;
 			children = (
+				8EAC3D091D6A9F8E00C2410C /* Resources */,
 				8EAC3CDB1D6A9EF000C2410C /* AppDelegate.swift */,
 				8EAC3CDD1D6A9EF000C2410C /* ViewController.swift */,
+				8EAC3D0D1D6AA83B00C2410C /* AudioManager.swift */,
+				8EAC745A1DAC2C8C00C39815 /* Knob.swift */,
 				8EAC3CDF1D6A9EF000C2410C /* Main.storyboard */,
 				8EAC3CE21D6A9EF000C2410C /* Assets.xcassets */,
 				8EAC3CE41D6A9EF000C2410C /* LaunchScreen.storyboard */,
@@ -123,6 +132,22 @@
 				8EAC3CFD1D6A9EF000C2410C /* Info.plist */,
 			);
 			path = "Early BirdUITests";
+			sourceTree = "<group>";
+		};
+		8EAC3D091D6A9F8E00C2410C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8EAC3D0A1D6A9F9700C2410C /* Sounds */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8EAC3D0A1D6A9F9700C2410C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				8EAC3D0B1D6A9FAB00C2410C /* alarm.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,13 +218,16 @@
 				TargetAttributes = {
 					8EAC3CD71D6A9EF000C2410C = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					8EAC3CEB1D6A9EF000C2410C = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = 8EAC3CD71D6A9EF000C2410C;
 					};
 					8EAC3CF61D6A9EF000C2410C = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = 8EAC3CD71D6A9EF000C2410C;
 					};
 				};
@@ -229,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EAC3D0C1D6A9FAB00C2410C /* alarm.mp3 in Resources */,
 				8EAC3CE61D6A9EF000C2410C /* LaunchScreen.storyboard in Resources */,
 				8EAC3CE31D6A9EF000C2410C /* Assets.xcassets in Resources */,
 				8EAC3CE11D6A9EF000C2410C /* Main.storyboard in Resources */,
@@ -256,8 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EAC3D0E1D6AA83B00C2410C /* AudioManager.swift in Sources */,
 				8EAC3CDE1D6A9EF000C2410C /* ViewController.swift in Sources */,
 				8EAC3CDC1D6A9EF000C2410C /* AppDelegate.swift in Sources */,
+				8EAC745B1DAC2C8C00C39815 /* Knob.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,9 +431,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Early Bird/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.earlybird.Early-Bird";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -411,9 +444,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Early Bird/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.earlybird.Early-Bird";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -425,6 +460,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.earlybird.Early-BirdTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Early Bird.app/Early Bird";
 			};
 			name = Debug;
@@ -437,6 +473,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.earlybird.Early-BirdTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Early Bird.app/Early Bird";
 			};
 			name = Release;
@@ -448,6 +485,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.earlybird.Early-BirdUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Early Bird";
 			};
 			name = Debug;
@@ -459,6 +497,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.earlybird.Early-BirdUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Early Bird";
 			};
 			name = Release;
@@ -482,6 +521,7 @@
 				8EAC3D021D6A9EF000C2410C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EAC3D031D6A9EF000C2410C /* Build configuration list for PBXNativeTarget "Early BirdTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +530,7 @@
 				8EAC3D051D6A9EF000C2410C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EAC3D061D6A9EF000C2410C /* Build configuration list for PBXNativeTarget "Early BirdUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +539,7 @@
 				8EAC3D081D6A9EF000C2410C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
